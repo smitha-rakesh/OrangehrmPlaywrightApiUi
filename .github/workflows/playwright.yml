@@ -54,7 +54,7 @@ jobs:
           retention-days: 7
 
       - name: Send Email Report
-        run: node utils/emailUtil.ts
+        run: node util/emailUtil.ts
         env:
           EMAIL_USER: ${{ secrets.EMAIL_USER }}
           EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
