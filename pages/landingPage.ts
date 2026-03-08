@@ -12,6 +12,6 @@ export class LandingPage{
     async land(url: string)
     {
         await this.page.goto(config.url + url);
-        await this.page.waitForLoadState('networkidle',{timeout: 30000});
+        await this.page.waitForLoadState('domcontentloaded',{timeout: 30000});
     }
 }

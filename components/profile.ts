@@ -15,7 +15,7 @@ export class UserProfile{
     {
         await this.loggedInUserProfile().click();
         await this.logoutButton().click();
-        await this.page.waitForLoadState('networkidle',{timeout: 30000});
+        await this.page.waitForLoadState('domcontentloaded',{timeout: 30000});
         return this.page.url();
     }
 }

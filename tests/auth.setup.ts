@@ -10,7 +10,7 @@ setup('login and save state', async ({ page }) => {
 
   await page.click('button[type="submit"]');
 
-  await page.waitForLoadState('networkidle', { timeout: 30000 });
+  await page.waitForURL('**/dashboard/index');
   await page.waitForTimeout(10000);
   await page.context().storageState({
     path: 'storageState.json'
